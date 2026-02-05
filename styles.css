@@ -1,0 +1,139 @@
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --accent: #6ae3ff;
+  --text: #e6e6eb;
+  --muted: #9aa0b3;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(1200px 600px at top, #151823, var(--bg));
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.profile {
+  text-align: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 2px solid rgba(255,255,255,0.08);
+}
+
+.profile h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tagline {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link-card {
+  display: flex;            /* <-- make it a flex container */
+  align-items: center;      /* vertically center icon + text */
+  gap: 16px;                /* space between icon and text */
+  
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 5px 5px;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(106,227,255,0.5);
+  background: linear-gradient(180deg, rgba(106,227,255,0.12), rgba(255,255,255,0));
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.icon img.invert {
+  filter: invert(1);
+}
+
+.icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--accent);
+}
+
+.link-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-title {
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+}
+
+.link-subtitle {
+  font-size: 0.85rem;
+  margin-top: 4px;
+  display: block;
+}
+
+.link-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 4px;
+  display: block;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
